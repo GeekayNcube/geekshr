@@ -11,17 +11,17 @@ import '../../../util/preferences_manager.dart';
 import '../../_components/c_elevated_button.dart';
 import '../../_components/c_text_form_field.dart';
 
-class Body extends StatelessWidget {
+class Body extends GetView<SignInController> {
   const Body({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    SignInController signInController = Get.put(SignInController());
+
 
     var username = PreferencesManager.getInstance().getStringValue("username");
 
     if (username.isNotEmpty) {
-      signInController.usernameController = TextEditingController(
+      controller.usernameController = TextEditingController(
         text: username,
       );
     }
@@ -48,12 +48,12 @@ class Body extends StatelessWidget {
               'Username',
               style: Theme.of(
                 context,
-              ).textTheme.headlineMedium!.copyWith(fontWeight: FontWeight.w500),
+              ).textTheme.bodyLarge!.copyWith(fontWeight: FontWeight.w500),
             ),
             SizedBox(height: 10.h),
             CTextFormField(
               hintText: 'Enter your user name',
-              textControllor: signInController.usernameController,
+              textControllor: controller.usernameController,
               textInputAction: TextInputAction.next,
               prefixIcon: Theme.of(context).brightness == Brightness.light
                   ? SvgPicture.asset('assets/svgs/user_light_icon.svg')
@@ -64,13 +64,13 @@ class Body extends StatelessWidget {
               'Password',
               style: Theme.of(
                 context,
-              ).textTheme.headlineMedium!.copyWith(fontWeight: FontWeight.w500),
+              ).textTheme.bodyLarge!.copyWith(fontWeight: FontWeight.w500),
             ),
             SizedBox(height: 10.h),
             Consumer<PasswordProvider>(
               builder: (context, pp, child) {
                 return CTextFormField(
-                  textControllor: signInController.passwordController,
+                  textControllor: controller.passwordController,
                   //..text = 'test421',
                   obscureText: pp.isObscure,
                   textInputAction: TextInputAction.done,
@@ -95,7 +95,7 @@ class Body extends StatelessWidget {
             SizedBox(height: 15.h),
             InkWell(
               onTap: () async {
-                await signInController.forgotPassword();
+                await controller.forgotPassword();
               },
               child: Text(
                 'Forgot Password?',
@@ -109,7 +109,7 @@ class Body extends StatelessWidget {
             CElevatedButton(
               child: const Text('Login'),
               onPressed: () async {
-                await signInController.login();
+                await controller.login();
               },
             ),
             SizedBox(height: 20.h),

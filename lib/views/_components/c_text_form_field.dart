@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+
 class CTextFormField extends StatelessWidget {
   final TextEditingController? textControllor;
   final String? hintText;
@@ -48,16 +49,21 @@ class CTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: textControllor,
+      // if a controller is provided, don't pass initialValue (invalid to provide both)
+      initialValue: textControllor == null ? initialValue : null,
       decoration: InputDecoration(
-        prefixIcon: Padding(
-          padding: REdgeInsets.symmetric(vertical: 17.h, horizontal: 14.w),
+        // only provide prefixIcon padding when an icon exists
+        prefixIcon: prefixIcon != null
+            ? Padding(
+          padding:
+          REdgeInsets.symmetric(vertical: 17.h, horizontal: 14.w),
           child: prefixIcon,
-        ),
+        )
+            : null,
         hintText: hintText,
         suffixIcon: suffixIcon,
       ),
       style: Theme.of(context).textTheme.titleMedium,
-      initialValue: initialValue,
       obscureText: obscureText,
       keyboardType: keyboardType,
       textInputAction: textInputAction,

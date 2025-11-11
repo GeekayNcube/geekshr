@@ -21,7 +21,6 @@ ThemeData lightTheme = ThemeData(
   appBarTheme: AppBarTheme(
     // centerTitle: true,
     titleTextStyle: GoogleFonts.dmSans(
-      fontSize: 16.sp,
       fontWeight: FontWeight.w500,
       color: const Color(0xFF151B33),
     ),
@@ -30,7 +29,7 @@ ThemeData lightTheme = ThemeData(
   ),
   inputDecorationTheme: InputDecorationTheme(
     hintStyle: GoogleFonts.dmSans(
-      fontSize: 14.sp,
+
       fontWeight: FontWeight.w400,
       color: kLightHintTextColor,
     ),
@@ -59,52 +58,47 @@ ThemeData lightTheme = ThemeData(
   ),
   textTheme: TextTheme(
     headlineLarge: GoogleFonts.dmSans(
-      fontSize: 24.sp,
       fontWeight: FontWeight.w700,
       color: const Color(0xFF151B33),
     ),
     headlineMedium: GoogleFonts.dmSans(
-      fontSize: 22.sp,
       fontWeight: FontWeight.w700,
       color: const Color(0xFF151B33),
     ),
     headlineSmall: GoogleFonts.dmSans(
-      fontSize: 18.sp,
       fontWeight: FontWeight.w700,
       color: const Color(0xFF151B33),
     ),
     displayLarge: GoogleFonts.dmSans(
-      fontSize: 16.sp,
       fontWeight: FontWeight.w700,
       color: const Color(0xFF151B33),
     ),
     displayMedium: GoogleFonts.dmSans(
-      fontSize: 14.sp,
       fontWeight: FontWeight.w700,
       color: const Color(0xFF151B33),
     ),
     displaySmall: GoogleFonts.dmSans(
-      fontSize: 12.sp,
+
       fontWeight: FontWeight.w700,
       color: const Color(0xFF151B33),
     ),
     titleLarge: GoogleFonts.dmSans(
-      fontSize: 14.sp,
+
       fontWeight: FontWeight.w400,
       color: const Color(0xFF151B33),
     ),
     titleMedium: GoogleFonts.dmSans(
-      fontSize: 14.sp,
+
       fontWeight: FontWeight.w500,
       color: const Color(0xFF235784),
     ),
     bodyLarge: GoogleFonts.dmSans(
-      fontSize: 14.sp,
+
       fontWeight: FontWeight.w400,
       color: kLightTextColor,
     ),
     bodyMedium: GoogleFonts.dmSans(
-      fontSize: 12.sp,
+
       fontWeight: FontWeight.w400,
       color: kLightTextColor,
     ),

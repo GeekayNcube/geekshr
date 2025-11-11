@@ -20,7 +20,6 @@ ThemeData darkTheme = ThemeData(
   appBarTheme: AppBarTheme(
     ///centerTitle: true,
     titleTextStyle: GoogleFonts.dmSans(
-      fontSize: 16.sp,
       fontWeight: FontWeight.w500,
       color: const Color(0xFFFFFFFF),
     ),
@@ -29,7 +28,6 @@ ThemeData darkTheme = ThemeData(
   ),
   inputDecorationTheme: InputDecorationTheme(
     hintStyle: GoogleFonts.dmSans(
-      fontSize: 14.sp,
       fontWeight: FontWeight.w400,
       color: kDarkHintTextColor,
     ),
@@ -59,52 +57,42 @@ ThemeData darkTheme = ThemeData(
   cardColor: const Color(0xFF212330),
   textTheme: TextTheme(
     headlineLarge: GoogleFonts.dmSans(
-      fontSize: 24.sp,
       fontWeight: FontWeight.w700,
       color: const Color(0xFFFFFFFF),
     ),
     headlineMedium: GoogleFonts.dmSans(
-      fontSize: 22.sp,
       fontWeight: FontWeight.w700,
       color: const Color(0xFFFFFFFF),
     ),
     headlineSmall: GoogleFonts.dmSans(
-      fontSize: 18.sp,
       fontWeight: FontWeight.w700,
       color: const Color(0xFFFFFFFF),
     ),
     displayLarge: GoogleFonts.dmSans(
-      fontSize: 16.sp,
       fontWeight: FontWeight.w700,
       color: const Color(0xFFFFFFFF),
     ),
     displayMedium: GoogleFonts.dmSans(
-      fontSize: 14.sp,
       fontWeight: FontWeight.w700,
       color: const Color(0xFFFFFFFF),
     ),
     displaySmall: GoogleFonts.dmSans(
-      fontSize: 12.sp,
       fontWeight: FontWeight.w700,
       color: const Color(0xFFFFFFFF),
     ),
     titleLarge: GoogleFonts.dmSans(
-      fontSize: 14.sp,
       fontWeight: FontWeight.w400,
       color: const Color(0xFFFFFFFF),
     ),
     titleMedium: GoogleFonts.dmSans(
-      fontSize: 14.sp,
       fontWeight: FontWeight.w500,
       color: const Color(0xFF01B4D4),
     ),
     bodyLarge: GoogleFonts.dmSans(
-      fontSize: 14.sp,
       fontWeight: FontWeight.w400,
       color: kDarkTextColor,
     ),
     bodyMedium: GoogleFonts.dmSans(
-      fontSize: 12.sp,
       fontWeight: FontWeight.w400,
       color: kDarkTextColor,
     ),
